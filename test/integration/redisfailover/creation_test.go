@@ -168,6 +168,7 @@ func (c *clients) testCRCreation(t *testing.T) {
 				Exporter: redisfailoverv1.Exporter{
 					Enabled: true,
 				},
+				CustomConfig: []string{`save ""`},
 			},
 			Sentinel: redisfailoverv1.SentinelSettings{
 				Replicas: sentinelSize,
